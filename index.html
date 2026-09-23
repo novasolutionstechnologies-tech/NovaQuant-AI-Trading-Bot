@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpeg" href="/novaquant-logo.jpg" />
+    <title>NovaQuant AI Trading Bot</title>
+    <meta name="description" content="AI-powered cryptocurrency trading platform with dual-engine AI consensus, technical indicators, strict risk management, and live trade monitoring." />
+    <meta property="og:title" content="NovaQuant AI Trading Bot" />
+    <meta property="og:description" content="AI-powered cryptocurrency trading platform with dual-engine AI consensus, technical indicators, strict risk management, and live trade monitoring." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Benign Vite HMR WebSocket suppression for sandboxed cloud preview environment
+      function isBenignWsError(msg) {
+        if (!msg) return false;
+        var str = String(msg);
+        return str.indexOf('WebSocket') !== -1 || str.indexOf('websocket') !== -1;
+      }
+      window.addEventListener('unhandledrejection', function (event) {
+        var reason = event.reason;
+        var text = (reason && (reason.message || reason.stack || String(reason))) || '';
+        if (isBenignWsError(text)) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        }
+      });
+      window.addEventListener('error', function (event) {
+        var text = (event && (event.message || (event.error && event.error.message))) || '';
+        if (isBenignWsError(text)) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

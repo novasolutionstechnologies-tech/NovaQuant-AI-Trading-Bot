@@ -1,0 +1,6 @@
+{
+  "name": "NovaQuant AI Trading Bot",
+  "description": "AI-powered cryptocurrency trading platform with dual-engine AI consensus, technical indicators, strict risk management, and live trade monitoring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

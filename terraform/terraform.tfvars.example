@@ -1,0 +1,6 @@
+project_id      = "your-gcp-project-id"
+region          = "asia-southeast1"
+service_name    = "novaquant-backend"
+container_image = "gcr.io/your-gcp-project-id/novaquant-backend:latest"
+gemini_api_key  = "your-gemini-api-key"
+openai_api_key  = ""
